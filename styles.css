@@ -360,7 +360,6 @@ h2, h3, p, ul, li, h4, h5, figure {
 }
 
 footer {
-  margin-top: 1000px;
   background-color: #00377B;
   min-height: 202px;
 }
@@ -396,9 +395,10 @@ footer {
 }
 .footer-content {
   max-width: 1280px;
+  box-sizing: border-box;
   margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -441,6 +441,9 @@ footer {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #00377B;
+}
+.hire__button_hidden {
+  display: none;
 }
 .hire__button {
   height: 52px;
@@ -528,6 +531,7 @@ body {
 }
 
 .pages {
+  margin: 0 auto 60px auto;
   display: flex;
   max-width: 300px;
   height: 50px;
@@ -546,11 +550,13 @@ body {
 }
 
 .left-arrow {
+  cursor: pointer;
   transform: rotate(90deg);
   box-shadow: 0px -2px 4px rgba(130, 124, 103, 0.04), 0px 2px 24px rgba(130, 124, 103, 0.08);
 }
 
 .right-arrow {
+  cursor: pointer;
   transform: rotate(270deg);
   box-shadow: 0px -2px 4px rgba(130, 124, 103, 0.04), 0px 2px 24px rgba(130, 124, 103, 0.08);
 }
@@ -564,6 +570,61 @@ body {
   background-color: #F0EFE9;
 }
 
+@media screen and (max-width: 768px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .footer-text {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .soc-media {
+    margin-bottom: 32px;
+  }
+
+  .hire__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hire__text {
+    text-align: center;
+  }
+  .hire__button {
+    display: none;
+  }
+  .hire__button_hidden {
+    display: block;
+    margin: 0 auto 60px auto;
+    height: 52px;
+    width: 221px;
+    background-color: #00377B;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .hire__h5 {
+    text-align: center;
+  }
+  .hire__p-text {
+    text-align: center;
+  }
+
+  .hire__button {
+    display: none;
+  }
+}
 .flex {
   display: flex;
 }
@@ -582,6 +643,7 @@ body {
 
 .section__main-block:hover .section__header {
   color: #F04E30;
+  cursor: pointer;
 }
 
 .hidden-text {
